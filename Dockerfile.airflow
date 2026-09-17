@@ -1,0 +1,5 @@
+FROM apache/airflow:2.11.0-python3.12
+COPY --chown=airflow:root . /opt/creditlake
+RUN python -m venv /opt/creditlake/.venv && /opt/creditlake/.venv/bin/pip install --no-cache-dir /opt/creditlake
+ENV CREDITLAKE_ROOT=/opt/creditlake CREDITLAKE_DATA_DIR=/opt/airflow/creditlake-data
+ENV CREDITLAKE_BINARY=/opt/creditlake/.venv/bin/creditlake CREDITLAKE_PYTHON=/opt/creditlake/.venv/bin/python

@@ -1,0 +1,10 @@
+.git
+.venv
+data
+demo
+docs/evidence
+__pycache__
+*.egg-info
+.pytest_cache
+.ruff_cache
+first-run.json

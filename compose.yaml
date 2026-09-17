@@ -1,0 +1,38 @@
+services:
+  pipeline:
+    build: .
+    command: [creditlake, run]
+    volumes:
+      - creditlake-data:/app/data
+  api:
+    build: .
+    depends_on:
+      pipeline:
+        condition: service_completed_successfully
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - creditlake-data:/app/data
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=5)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+  airflow:
+    profiles: [airflow]
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    command: standalone
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      SEC_USER_AGENT: ${SEC_USER_AGENT:-}
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - ./dags:/opt/airflow/dags:ro
+      - creditlake-data:/opt/airflow/creditlake-data
+      - airflow-home:/opt/airflow
+volumes:
+  creditlake-data:
+  airflow-home:
