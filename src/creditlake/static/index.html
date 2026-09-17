@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CreditLake · Financial Data Platform</title>
+  <style>
+    :root{--bg:#0b121c;--panel:#121d2a;--line:#263343;--text:#edf2f8;--muted:#9eaec2;--green:#72e2bc;--blue:#81b4ff;--amber:#ffc578}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;font-size:14px;line-height:1.5}
+    button,input,select{font:inherit}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}button,select,input{color:var(--text);background:#0e1825;border:1px solid #3b4a5f;border-radius:8px;padding:10px 12px}button{cursor:pointer}button:hover{border-color:var(--green)}select{max-width:100%}input{color-scheme:dark}
+    .shell{max-width:1260px;margin:auto;padding:28px 38px 36px}.top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-bottom:25px;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:12px}.logo{width:36px;height:36px;border-radius:10px;background:var(--green);display:grid;place-items:center;color:#0b121c;font-size:23px;font-weight:800}.wordmark{font-size:22px;font-weight:650;letter-spacing:-.8px}.eyebrow{color:var(--muted);text-transform:uppercase;letter-spacing:1.7px;font-size:10px;font-weight:650}.pill{font-size:11px;padding:6px 11px;border-radius:100px;background:#162d2b;color:var(--green);border:1px solid #26433c}.dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:7px}.header{margin:30px 0 23px}h1{font-size:32px;font-weight:600;letter-spacing:-1px;margin:5px 0 7px}p{color:var(--muted);margin:0}.filters{display:flex;align-items:end;gap:16px;margin:24px 0}.field{display:grid;gap:5px}.field label{font-size:11px;color:var(--muted)}.field.company{flex:1;max-width:435px}.filters .helper{margin-left:auto;font-size:11px;text-align:right;max-width:250px}.company-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:28px 0 17px}h2{margin:0;font-size:18px;letter-spacing:-.3px;font-weight:600}.subtle{font-size:11px;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card,.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px}.card{padding:19px 20px}.label{font-size:11px;color:var(--muted)}.value{font-size:29px;font-weight:550;letter-spacing:-1px;margin:8px 0 5px}.detail{font-size:11px;color:var(--muted)}.green{color:var(--green)}.amber{color:var(--amber)}.grid{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;margin-top:18px}.panel{padding:21px 23px;min-width:0}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px}.panel-head h3{margin:0;font-size:14px;font-weight:550}.panel-head select{font-size:11px;padding:6px 10px}.chart{width:100%;height:210px}.chart-note{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);gap:16px}.quality-list{display:grid;gap:17px;margin:22px 0}.quality-row{display:flex;justify-content:space-between;font-size:12px;border-bottom:1px solid var(--line);padding-bottom:11px}.quality-row:last-child{border:0;padding:0}.quality-value{font-weight:600}.small-note{font-size:10px;line-height:1.7;color:var(--muted)}.table-panel{margin-top:18px}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:11px;white-space:nowrap}th{text-align:left;color:var(--muted);font-size:10px;font-weight:500;padding:10px 14px 10px 0;border-bottom:1px solid #3a4759}td{padding:12px 14px 12px 0;border-bottom:1px solid var(--line)}tr:last-child td{border-bottom:0}.num{text-align:right}.metric{font-weight:550;font-size:12px}.tag{font-size:10px;color:var(--green);border:1px solid #35564f;padding:3px 6px;border-radius:5px}.legend{font-size:11px;margin:0 0 13px;color:var(--muted)}.footer{display:flex;justify-content:space-between;gap:15px;margin-top:25px;color:var(--muted);font-size:10px}.error{padding:15px 18px;border:1px solid #7e5341;border-radius:8px;color:var(--amber);margin-top:20px;background:#271c19}.hidden{display:none}.empty{padding:25px;color:var(--muted);text-align:center}.loading{opacity:.55}.revision-title{margin-top:8px}.mono{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:10px}
+    @media(max-width:850px){.shell{padding:20px}.grid{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.filters{flex-wrap:wrap}.filters .helper{display:none}.field.company{max-width:none;min-width:230px}h1{font-size:28px}.footer{flex-wrap:wrap}}
+    @media(max-width:430px){.shell{padding:16px}.cards{gap:9px}.card{padding:15px}.value{font-size:24px}.top{gap:8px}.wordmark{font-size:20px}.pill{font-size:9px}.company-heading{align-items:start}.company-heading h2{font-size:16px}.panel{padding:17px}.filters{gap:10px}}
+  </style>
+</head>
+<body>
+<div class="shell">
+  <div class="top"><div class="brand"><span class="logo" aria-hidden="true">≋</span><div><div class="wordmark">CreditLake</div><div class="eyebrow">Financial data platform</div></div></div><span class="pill" id="badge"><span class="dot"></span>Loading validated data</span></div>
+  <header class="header"><div class="eyebrow">Research workspace / DFW issuers</div><h1>Financials you can trace.</h1><p>Annual reporting, historical filing cutoffs, and the evidence behind every number.</p></header>
+  <form class="filters" id="filters"><div class="field company"><label for="company">Company</label><select id="company" aria-label="Company"></select></div><div class="field"><label for="cutoff">Filings known by</label><input type="date" id="cutoff" required></div><button type="submit">Apply cutoff ↗</button><div class="helper">Compare filing evidence available by a date.<br>Period ends follow each issuer's fiscal calendar.</div></form>
+  <div id="error" class="error hidden" role="alert"></div>
+  <main id="content" aria-live="polite">
+    <div class="company-heading"><div><h2 id="company-name">Loading companies…</h2><span class="subtle" id="company-meta"></span></div><span class="pill" id="period-label">Annual financials</span></div>
+    <div class="cards"><div class="card"><div class="label">Revenue · USD</div><div class="value" id="revenue">—</div><div class="detail" id="growth">Annual reported revenue</div></div><div class="card"><div class="label">Total assets · USD</div><div class="value" id="assets">—</div><div class="detail" id="leverage">Liabilities / assets: —</div></div><div class="card"><div class="label">Net profit margin</div><div class="value" id="margin">—</div><div class="detail">Net income / annual revenue</div></div><div class="card"><div class="label">Current ratio</div><div class="value" id="liquidity">—</div><div class="detail" id="liquidity-note">Current assets / current liabilities</div></div></div>
+    <div class="grid"><section class="panel"><div class="panel-head"><h3>Annual performance</h3><select id="chart-metric" aria-label="Chart metric"><option value="revenue">Revenue</option><option value="net_income">Net income</option><option value="assets">Total assets</option></select></div><svg class="chart" id="chart" viewBox="0 0 620 210" role="img" aria-label="Annual financial performance chart"></svg><div class="chart-note"><span>USD billions · actual fiscal period ends</span><span id="chart-caption"></span></div></section><section class="panel"><div class="panel-head"><h3>Publication health</h3><span class="tag">Validated release</span></div><div class="quality-list"><div class="quality-row"><span>dbt quality checks passed</span><span class="quality-value green" id="checks">—</span></div><div class="quality-row"><span>Preserved financial fact versions</span><span class="quality-value" id="facts-count">—</span></div><div class="quality-row"><span>Annual company periods</span><span class="quality-value" id="periods-count">—</span></div><div class="quality-row"><span>Source issuers</span><span class="quality-value" id="issuers-count">—</span></div></div><div class="small-note" id="publication-note"></div></section></div>
+    <section class="panel table-panel"><div class="panel-head"><h3>Source evidence</h3><div class="field"><label for="period">Fiscal period end</label><select id="period"></select></div></div><div class="legend">Values remain in reported USD. Each row links to the filing selected at your cutoff.</div><div class="table-wrap"><table><thead><tr><th>Financial metric</th><th class="num">Reported value</th><th>Filed</th><th>Taxonomy concept</th><th>Evidence</th></tr></thead><tbody id="evidence"></tbody></table></div></section>
+    <section class="panel table-panel"><div class="panel-head"><h3>Changed filing values</h3><span class="subtle">Most recent 8 changes</span></div><div class="legend">Changes may reflect reclassification or revised comparatives; they do not automatically indicate a formal restatement.</div><div class="table-wrap"><table><thead><tr><th>Metric</th><th>Period end</th><th>Filed</th><th class="num">Previous USD</th><th class="num">Updated USD</th><th class="num">Change</th></tr></thead><tbody id="revisions"></tbody></table></div></section>
+  </main>
+  <footer class="footer"><span>SEC Company Facts · 10-K / 10-K/A · whole-entity USD reporting</span><span id="mode"></span><a id="export-link" href="/api/exports/mart_company_trends.csv">Download analytical CSV ↗</a></footer>
+</div>
+<!-- DEMO_DATA -->
+<script>
+  const $=id=>document.getElementById(id), demo=window.CREDITLAKE_DEMO;
+  const labels={revenue:'Revenue',assets:'Total assets',liabilities:'Total liabilities',equity:'Total equity',net_income:'Net income',operating_income:'Operating income',operating_cash_flow:'Operating cash flow',current_assets:'Current assets',current_liabilities:'Current liabilities',cash:'Cash & equivalents'};
+  let status,companies=[],history=[],facts=[],requestNumber=0;
+  const present=x=>x!==null&&x!==undefined&&Number.isFinite(Number(x));
+  const money=x=>present(x)?new Intl.NumberFormat('en-US',{maximumFractionDigits:0}).format(Number(x)):'Unavailable';
+  const compact=x=>present(x)?'$'+new Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:2}).format(Number(x)):'—';
+  const percent=x=>present(x)?(Number(x)*100).toFixed(1)+'%':'—';
+  function text(id,value){$(id).textContent=value}
+  function ratio(a,b){return present(a)&&present(b)&&Number(b)!==0?Number(a)/Number(b):null}
+  async function get(path){const response=await fetch(path);if(!response.ok){let reason;try{reason=(await response.json()).detail}catch{reason='Request failed'}throw new Error(typeof reason==='string'?reason:'Invalid request')}return response.json()}
+  function canonical(ticker,cutoff){
+    const selected=new Map();
+    const candidates=demo.candidates[ticker].filter(f=>f.filed<=cutoff).sort((a,b)=>b.filed.localeCompare(a.filed)||a.alias_priority-b.alias_priority||b.accession.localeCompare(a.accession)||b.first_observed.localeCompare(a.first_observed)||a.fact_id.localeCompare(b.fact_id));
+    for(const fact of candidates){const key=fact.metric+'|'+fact.period_end;if(!selected.has(key))selected.set(key,fact)}
+    return [...selected.values()];
+  }
+  function offlineHistory(selected){
+    const periods=new Map();for(const fact of selected){if(!periods.has(fact.period_end))periods.set(fact.period_end,{period_end:fact.period_end,available_metrics:0});const row=periods.get(fact.period_end);row[fact.metric]=fact.value;row.available_metrics++}
+    const output=[...periods.values()].filter(row=>present(row.revenue)).sort((a,b)=>a.period_end.localeCompare(b.period_end));
+    output.forEach((row,i)=>{row.net_margin=ratio(row.net_income,row.revenue);row.current_ratio=ratio(row.current_assets,row.current_liabilities);row.liabilities_to_assets=ratio(row.liabilities,row.assets);row.revenue_growth_yoy=null;if(i){const prior=output[i-1],days=(Date.parse(row.period_end)-Date.parse(prior.period_end))/86400000;if(days>=330&&days<=400){const comparison=ratio(row.revenue,prior.revenue);row.revenue_growth_yoy=comparison===null?null:comparison-1}}});return output;
+  }
+  function renderChart(){
+    const metric=$('chart-metric').value,svg=$('chart');svg.replaceChildren();
+    const valid=history.filter(row=>present(row[metric]));if(!valid.length){text('chart-caption','No available values');return}
+    const ns='http://www.w3.org/2000/svg',left=47,right=605,top=10,bottom=175,values=valid.map(row=>Number(row[metric])/1e9),min=Math.min(0,...values),max=Math.max(1e-6,...values),span=max-min||1;
+    function element(name,attrs,content){const node=document.createElementNS(ns,name);Object.entries(attrs).forEach(([key,value])=>node.setAttribute(key,value));if(content!==undefined)node.textContent=content;svg.append(node);return node}
+    const x=i=>left+i*(right-left)/Math.max(valid.length-1,1),y=value=>bottom-(value-min)/span*(bottom-top);
+    for(let i=0;i<=3;i++){const value=min+i*span/3,pos=y(value);element('line',{x1:left,x2:right,y1:pos,y2:pos,stroke:'#293647','stroke-dasharray':'3 5'});element('text',{x:0,y:pos+4,fill:'#9eaec2','font-size':10},value.toFixed(1))}
+    element('polyline',{points:values.map((v,i)=>x(i)+','+y(v)).join(' '),fill:'none',stroke:'#72e2bc','stroke-width':2.5,'stroke-linejoin':'round'});
+    valid.forEach((row,i)=>{const point=element('circle',{cx:x(i),cy:y(values[i]),r:3.5,fill:'#72e2bc'});const title=document.createElementNS(ns,'title');title.textContent=row.period_end+': '+compact(row[metric]);point.append(title);if(i===0||i===valid.length-1||i%2===0)element('text',{x:x(i),y:199,fill:'#9eaec2','font-size':10,'text-anchor':'middle'},row.period_end.slice(0,4))});
+    text('chart-caption',valid.length+' annual periods');
+  }
+  function renderEvidence(){
+    const selected=facts.filter(f=>f.period_end===$('period').value).sort((a,b)=>(labels[a.metric]||a.metric).localeCompare(labels[b.metric]||b.metric));
+    const body=$('evidence');body.replaceChildren();
+    for(const fact of selected){const tr=document.createElement('tr');const fields=[labels[fact.metric]||fact.metric,money(fact.value),fact.filed,fact.concept];fields.forEach((value,index)=>{const td=document.createElement('td');td.textContent=value;if(index===0)td.className='metric';if(index===1)td.className='num';if(index===3)td.className='mono';tr.append(td)});const td=document.createElement('td'),a=document.createElement('a');a.textContent=fact.form+' ↗';a.href=fact.filing_url;a.target='_blank';a.rel='noopener noreferrer';td.append(a);tr.append(td);body.append(tr)}
+    if(!selected.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=5;td.className='empty';td.textContent='No annual evidence available by this filing cutoff.';tr.append(td);body.append(tr)}
+  }
+  function renderRevisions(revisions){
+    const body=$('revisions');body.replaceChildren();
+    for(const row of revisions.slice(0,8)){const tr=document.createElement('tr');[labels[row.metric]||row.metric,row.period_end,row.filed,money(row.previous_value),money(row.value),percent(row.relative_change)].forEach((value,index)=>{const td=document.createElement('td');td.textContent=value;if(index>=3)td.className='num';tr.append(td)});body.append(tr)}
+    if(!revisions.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=6;td.className='empty';td.textContent='No changed filing values in this view.';tr.append(td);body.append(tr)}
+  }
+  async function refresh(){
+    const sequence=++requestNumber,ticker=$('company').value,cutoff=$('cutoff').value;
+    if(!cutoff)return;$('content').classList.add('loading');$('error').classList.add('hidden');
+    try{
+      let historyData,factData,revisionData;
+      if(demo){const selected=canonical(ticker,cutoff);historyData={history:offlineHistory(selected)};factData={facts:selected};revisionData={revisions:demo.revisions[ticker].filter(row=>row.filed<=cutoff)}}
+      else{[historyData,factData,revisionData]=await Promise.all([get('/api/companies/'+ticker+'/history?as_of='+cutoff),get('/api/companies/'+ticker+'/facts?as_of='+cutoff),get('/api/companies/'+ticker+'/revisions?as_of='+cutoff+'&limit=200')]);if(new Set([historyData.run_id,factData.run_id,revisionData.run_id]).size!==1)throw new Error('A new release was published during this request. Apply the cutoff again.');revisionData.revisions=revisionData.revisions.filter(row=>row.filed<=cutoff)}
+      if(sequence!==requestNumber)return;history=historyData.history;facts=factData.facts;
+      const issuer=companies.find(c=>c.ticker===ticker),latest=history.at(-1);
+      text('company-name',issuer.name);text('company-meta',ticker+' · '+issuer.sector+' · '+issuer.headquarters);text('period-label',latest?'FY ended '+latest.period_end:'No available annual period');
+      text('revenue',compact(latest?.revenue));text('assets',compact(latest?.assets));text('margin',percent(latest?.net_margin));text('liquidity',present(latest?.current_ratio)?Number(latest.current_ratio).toFixed(2)+'×':'—');text('growth',latest&&present(latest.revenue_growth_yoy)?percent(latest.revenue_growth_yoy)+' year over year':'YoY comparison unavailable');text('leverage','Liabilities / assets: '+percent(latest?.liabilities_to_assets));text('liquidity-note',latest&&present(latest.current_ratio)&&Number(latest.current_ratio)<1?'Below 1× · review industry context':'Current assets / current liabilities');
+      const oldPeriod=$('period').value;$('period').replaceChildren();[...history].reverse().forEach(row=>{const option=document.createElement('option');option.value=row.period_end;option.textContent=row.period_end;$('period').append(option)});if(history.some(row=>row.period_end===oldPeriod))$('period').value=oldPeriod;
+      renderChart();renderEvidence();renderRevisions(revisionData.revisions);
+    }catch(error){if(sequence===requestNumber){text('error',error.message);$('error').classList.remove('hidden')}}finally{if(sequence===requestNumber)$('content').classList.remove('loading')}
+  }
+  async function initialize(){
+    try{[status,companies]=demo?[demo.status,demo.companies]:await Promise.all([get('/api/status'),get('/api/companies')]);
+      companies.forEach(issuer=>{const option=document.createElement('option');option.value=issuer.ticker;option.textContent=issuer.ticker+' · '+issuer.name;$('company').append(option)});$('company').value=companies.some(c=>c.ticker==='TXN')?'TXN':companies[0].ticker;$('cutoff').value=status.filing_date_cutoff;
+      text('badge',status.dbt.tests_passed+' dbt checks passed');text('checks',status.dbt.tests_passed);text('facts-count',new Intl.NumberFormat('en-US').format(status.total_facts));text('periods-count',status.annual_periods);text('issuers-count',companies.length);text('publication-note','Published '+status.published_at.slice(0,10)+'. Raw evidence and filing revisions remain preserved. Missing metrics remain unavailable.');text('mode',demo?'Captured source data · standalone preview':'Validated warehouse · read-only API');
+      if(demo){$('export-link').classList.add('hidden')}await refresh();
+    }catch(error){text('error',error.message);$('error').classList.remove('hidden')}
+  }
+  $('filters').addEventListener('submit',event=>{event.preventDefault();refresh()});$('company').addEventListener('change',refresh);$('period').addEventListener('change',renderEvidence);$('chart-metric').addEventListener('change',renderChart);initialize();
+</script>
+</body>
+</html>
