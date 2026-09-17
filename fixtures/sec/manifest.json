@@ -1,0 +1,98 @@
+[
+  {
+    "cik": 97476,
+    "ticker": "TXN",
+    "sector": "Semiconductors",
+    "headquarters": "Dallas, TX",
+    "entity_name": "TEXAS INSTRUMENTS INCORPORATED",
+    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000097476.json",
+    "file": "CIK0000097476.json.gz",
+    "sha256": "5ee95bf56949988a4beaf0598e3acb0a012867228760cd9462a1c9e72526446f",
+    "uncompressed_bytes": 3650054,
+    "captured_at": "2026-09-17T16:30:22.182661+00:00"
+  },
+  {
+    "cik": 732717,
+    "ticker": "T",
+    "sector": "Telecommunications",
+    "headquarters": "Dallas, TX",
+    "entity_name": "AT&T INC.",
+    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000732717.json",
+    "file": "CIK0000732717.json.gz",
+    "sha256": "483db761a498797a4ba14df701a0404a8cc8d21b7409984eb1e722cb089f3dbb",
+    "uncompressed_bytes": 4734140,
+    "captured_at": "2026-09-17T16:30:29.077205+00:00"
+  },
+  {
+    "cik": 92380,
+    "ticker": "LUV",
+    "sector": "Airlines",
+    "headquarters": "Dallas, TX",
+    "entity_name": "SOUTHWEST AIRLINES CO.",
+    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000092380.json",
+    "file": "CIK0000092380.json.gz",
+    "sha256": "7c2768fa2d6bfc2aee4a9f17ac6e0814434a45623283a8a8da8218ddc6cf678b",
+    "uncompressed_bytes": 4083360,
+    "captured_at": "2026-09-17T16:30:34.661219+00:00"
+  },
+  {
+    "cik": 1138118,
+    "ticker": "CBRE",
+    "sector": "Commercial real estate services",
+    "headquarters": "Dallas, TX",
+    "entity_name": "CBRE GROUP, INC.",
+    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001138118.json",
+    "file": "CIK0001138118.json.gz",
+    "sha256": "193c8399edd08710c2458b7fa91716d3a03d67cbbffaaa85401125b8b0d4cc56",
+    "uncompressed_bytes": 4279716,
+    "captured_at": "2026-09-17T16:30:40.050784+00:00"
+  },
+  {
+    "cik": 900075,
+    "ticker": "CPRT",
+    "sector": "Vehicle auctions",
+    "headquarters": "Dallas, TX",
+    "entity_name": "COPART, INC.",
+    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000900075.json",
+    "file": "CIK0000900075.json.gz",
+    "sha256": "820b593560ae7951965697b19422e43b05b3352f6f2b0d8900ec49d591810d0a",
+    "uncompressed_bytes": 3416768,
+    "captured_at": "2026-09-17T16:30:45.428570+00:00"
+  },
+  {
+    "cik": 882184,
+    "ticker": "DHI",
+    "sector": "Homebuilding",
+    "headquarters": "Arlington, TX",
+    "entity_name": "D.R. Horton, Inc.",
+    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000882184.json",
+    "file": "CIK0000882184.json.gz",
+    "sha256": "d354326179bcea875450e68de79204f60b14ba93a6fb679d0ed9c8b70e3322f7",
+    "uncompressed_bytes": 3064917,
+    "captured_at": "2026-09-17T16:30:50.884486+00:00"
+  },
+  {
+    "cik": 1636222,
+    "ticker": "WING",
+    "sector": "Restaurants",
+    "headquarters": "Dallas, TX",
+    "entity_name": "WINGSTOP INC.",
+    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001636222.json",
+    "file": "CIK0001636222.json.gz",
+    "sha256": "b06e063a6d131b5a898269149242bf8d588aca401bcbf127028a748238368766",
+    "uncompressed_bytes": 1879469,
+    "captured_at": "2026-09-17T16:30:55.734361+00:00"
+  },
+  {
+    "cik": 703351,
+    "ticker": "EAT",
+    "sector": "Restaurants",
+    "headquarters": "Dallas, TX",
+    "entity_name": "BRINKER INTERNATIONAL,\u00a0INC.",
+    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000703351.json",
+    "file": "CIK0000703351.json.gz",
+    "sha256": "0e2fe98839a06982b89b3c274098fd69bc227124bb5457bdc64e5a8059a19088",
+    "uncompressed_bytes": 3575916,
+    "captured_at": "2026-09-17T16:31:01.050665+00:00"
+  }
+]
