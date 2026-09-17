@@ -1,0 +1,10 @@
+creditlake:
+  target: local
+  outputs:
+    local:
+      type: duckdb
+      path: "{{ env_var('CREDITLAKE_WAREHOUSE') }}"
+      schema: main
+      threads: 2
+      settings:
+        threads: 2
