@@ -1,0 +1,16 @@
+version: 2
+sources:
+  - name: sec
+    schema: raw
+    tables:
+      - name: facts
+        description: Immutable USD fact versions, including filing and first observation provenance.
+        columns:
+          - name: fact_id
+            data_tests: [unique, not_null]
+          - name: cik
+            data_tests: [not_null]
+          - name: value
+            data_tests: [not_null]
+      - name: issuer_history
+        description: Issuer attributes with SCD Type 2 application-time validity.
