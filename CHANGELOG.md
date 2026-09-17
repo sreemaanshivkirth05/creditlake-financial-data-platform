@@ -10,6 +10,7 @@
 - Measured a separate 500,000-row synthetic normalization and loading workload.
 - Expanded architecture, coverage investigation, scaling, operations, and profile documentation.
 - Configured Python-version CI jobs and a Docker Compose serving check.
+- Pinned official Node 24 GitHub Actions to exact commits after remote CI surfaced runtime deprecations.
 
 ## 1.0.0 — Auditable financial platform
 
