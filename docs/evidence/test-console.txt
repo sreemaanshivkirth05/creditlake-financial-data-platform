@@ -1,0 +1,24 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.0.2, pluggy-1.6.0
+rootdir: /workspace/scratch/1242c64b4be4/creditlake
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.15.1
+collected 34 items
+
+tests/test_all_rejected.py .                                             [  2%]
+tests/test_api.py ....                                                   [ 14%]
+tests/test_normalize.py .............                                    [ 52%]
+tests/test_numeric_identity.py .                                         [ 55%]
+tests/test_pipeline.py ...........                                       [ 88%]
+tests/test_precision.py .                                                [ 91%]
+tests/test_sources.py ...                                                [100%]
+
+=============================== warnings summary ===============================
+../.venv/lib/python3.12/site-packages/starlette/testclient.py:45
+  /workspace/scratch/1242c64b4be4/.venv/lib/python3.12/site-packages/starlette/testclient.py:45: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workspace/scratch/1242c64b4be4/creditlake/docs/evidence/pytest.xml -
+======================== 34 passed, 1 warning in 47.03s ========================

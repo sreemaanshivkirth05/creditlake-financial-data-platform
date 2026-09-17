@@ -1,0 +1,16 @@
+{
+  "airflow_version": "2.11.0",
+  "dag_id": "creditlake_daily",
+  "dag_import_errors": 0,
+  "tasks": [
+    {
+      "task_id": "build_test_publish",
+      "state": "success"
+    },
+    {
+      "task_id": "verify_published_release",
+      "state": "success"
+    }
+  ],
+  "dag_run_state": "success"
+}

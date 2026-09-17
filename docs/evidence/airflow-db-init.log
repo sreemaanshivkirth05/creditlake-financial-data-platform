@@ -1,0 +1,12 @@
+/workspace/scratch/1242c64b4be4/.airflow-venv/lib/python3.12/site-packages/airflow/metrics/base_stats_logger.py:22 RemovedInAirflow3Warning: Timer and timing metrics publish in seconds were deprecated. It is enabled by default from Airflow 3 onwards. Enable timer_unit_consistency to publish all the timer and timing metrics in milliseconds.
+/workspace/scratch/1242c64b4be4/.airflow-venv/lib/python3.12/site-packages/airflow/triggers/base.py:27 RemovedInAirflow3Warning: Timer and timing metrics publish in seconds were deprecated. It is enabled by default from Airflow 3 onwards. Enable timer_unit_consistency to publish all the timer and timing metrics in milliseconds.
+DB: sqlite:////tmp/creditlake-airflow/airflow.db
+Performing upgrade to the metadata database sqlite:////tmp/creditlake-airflow/airflow.db
+[2026-09-18T01:49:17.742+0900] {migration.py:207} INFO - Context impl SQLiteImpl.
+[2026-09-18T01:49:17.743+0900] {migration.py:210} INFO - Will assume non-transactional DDL.
+[2026-09-18T01:49:17.744+0900] {migration.py:207} INFO - Context impl SQLiteImpl.
+[2026-09-18T01:49:17.744+0900] {migration.py:210} INFO - Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Running stamp_revision  -> 5f2621c13b39
+Database migrating done!

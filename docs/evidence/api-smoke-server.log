@@ -1,0 +1,14 @@
+INFO:     Started server process [6]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8148 (Press CTRL+C to quit)
+INFO:     127.0.0.1:35100 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35106 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35112 - "GET /api/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35116 - "GET /api/companies/TXN/facts?period_end=2023-12-31 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35128 - "GET /api/facts/291dc2b37143388cc4f351939c6650dbba2c5f6d8582496ddb7efea60b5ea308/lineage HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35140 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [6]

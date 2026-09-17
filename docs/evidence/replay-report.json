@@ -1,0 +1,15 @@
+{
+  "run_id": "2323a8f971be4172acf0019d580a7b5e",
+  "status": "unchanged",
+  "mode": "fixture",
+  "started_at": "2026-09-17T16:49:51.102492+00:00",
+  "filing_date_cutoff": "2026-09-18",
+  "snapshots_loaded": 0,
+  "snapshots_skipped": 8,
+  "facts_inserted": 0,
+  "rejected_rows": 0,
+  "issuers": [],
+  "model_hash": "8b4c8dd3f0f37fda91fcaf337d5e553fd9ede3a4f2532933e9ada582d5da2ff8",
+  "published_run_id": "f2e388126a1f4c64980baecd2664e1c9",
+  "elapsed_seconds": 0.194
+}

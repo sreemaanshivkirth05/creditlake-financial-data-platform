@@ -1,0 +1,24 @@
+{
+  "checks": [
+    {
+      "target": "standalone",
+      "issuer_count": 8,
+      "historical_cutoff": true,
+      "empty_history": true,
+      "issuer_switch": true,
+      "chart_switch": true,
+      "mobile_no_overflow": true
+    },
+    {
+      "target": "api",
+      "issuer_count": 8,
+      "historical_cutoff": true,
+      "empty_history": true,
+      "issuer_switch": true,
+      "chart_switch": true,
+      "mobile_no_overflow": true
+    }
+  ],
+  "javascript_errors": [],
+  "browser": "134.0.6998.35"
+}

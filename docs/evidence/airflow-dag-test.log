@@ -1,0 +1,7 @@
+/workspace/scratch/1242c64b4be4/.airflow-venv/lib/python3.12/site-packages/airflow/metrics/base_stats_logger.py:22 RemovedInAirflow3Warning: Timer and timing metrics publish in seconds were deprecated. It is enabled by default from Airflow 3 onwards. Enable timer_unit_consistency to publish all the timer and timing metrics in milliseconds.
+[2026-09-18T01:49:50.139+0900] {dagbag.py:588} INFO - Filling up the DagBag from /workspace/scratch/1242c64b4be4/creditlake/dags
+/workspace/scratch/1242c64b4be4/.airflow-venv/lib/python3.12/site-packages/airflow/triggers/base.py:27 RemovedInAirflow3Warning: Timer and timing metrics publish in seconds were deprecated. It is enabled by default from Airflow 3 onwards. Enable timer_unit_consistency to publish all the timer and timing metrics in milliseconds.
+[2026-09-18T01:49:50.600+0900] {dag.py:4435} INFO - dagrun id: creditlake_daily
+[2026-09-18T01:49:50.610+0900] {dag.py:4451} INFO - created dagrun <DagRun creditlake_daily @ 2026-09-17 12:00:00+00:00: manual__2026-09-17T12:00:00+00:00, state:running, queued_at: None. externally triggered: False>
+[2026-09-18T01:49:50.628+0900] {dag.py:4396} INFO - [DAG TEST] starting task_id=build_test_publish map_index=-1
+[2026-09-18T01:49:50.629+0900] {dag.py:4399} INFO - [DAG TEST] running task <TaskInstance: creditlake_daily.build_test_publish manual__2026-09-17T12:00:00+00:00 [scheduled]>

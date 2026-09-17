@@ -1,0 +1,13 @@
+{
+  "dataset": "synthetic SEC-shaped USD asset observations",
+  "input_rows": 500000,
+  "verified_rows": 500000,
+  "verified_sum": "624999750000.0000",
+  "normalization_seconds": 6.239,
+  "parquet_seconds": 4.704,
+  "warehouse_load_seconds": 2.823,
+  "total_measured_seconds": 13.765,
+  "source_bytes": 67000110,
+  "parquet_bytes": 19030772,
+  "run_at": "2026-09-17T17:20:21.320643+00:00"
+}
