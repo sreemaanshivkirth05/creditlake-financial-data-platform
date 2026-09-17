@@ -1,0 +1,405 @@
+{
+  "run_id": "dd0f9d68a3904f73b05f2b5a5efcb144",
+  "status": "success",
+  "mode": "fixture",
+  "started_at": "2026-09-17T16:53:53.247129+00:00",
+  "filing_date_cutoff": "2026-09-17",
+  "snapshots_loaded": 8,
+  "snapshots_skipped": 0,
+  "facts_inserted": 10738,
+  "rejected_rows": 0,
+  "issuers": [
+    {
+      "ticker": "TXN",
+      "name": "TEXAS INSTRUMENTS INCORPORATED",
+      "accepted": 1183,
+      "inserted": 1183,
+      "rejected": 0
+    },
+    {
+      "ticker": "T",
+      "name": "AT&T INC.",
+      "accepted": 1521,
+      "inserted": 1521,
+      "rejected": 0
+    },
+    {
+      "ticker": "LUV",
+      "name": "SOUTHWEST AIRLINES CO.",
+      "accepted": 1310,
+      "inserted": 1310,
+      "rejected": 0
+    },
+    {
+      "ticker": "CBRE",
+      "name": "CBRE GROUP, INC.",
+      "accepted": 1526,
+      "inserted": 1526,
+      "rejected": 0
+    },
+    {
+      "ticker": "CPRT",
+      "name": "COPART, INC.",
+      "accepted": 1392,
+      "inserted": 1392,
+      "rejected": 0
+    },
+    {
+      "ticker": "DHI",
+      "name": "D.R. Horton, Inc.",
+      "accepted": 1224,
+      "inserted": 1224,
+      "rejected": 0
+    },
+    {
+      "ticker": "WING",
+      "name": "WINGSTOP INC.",
+      "accepted": 1315,
+      "inserted": 1315,
+      "rejected": 0
+    },
+    {
+      "ticker": "EAT",
+      "name": "BRINKER INTERNATIONAL,\u00a0INC.",
+      "accepted": 1267,
+      "inserted": 1267,
+      "rejected": 0
+    }
+  ],
+  "model_hash": "8b4c8dd3f0f37fda91fcaf337d5e553fd9ede3a4f2532933e9ada582d5da2ff8",
+  "dbt": {
+    "models": 6,
+    "tests_passed": 23
+  },
+  "warnings": [
+    {
+      "check": "metric_completeness",
+      "severity": "warning",
+      "rows": [
+        {
+          "ticker": "CBRE",
+          "period_end": "2015-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "CPRT",
+          "period_end": "2015-07-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "CPRT",
+          "period_end": "2016-07-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "CPRT",
+          "period_end": "2020-07-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "CPRT",
+          "period_end": "2021-07-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "CPRT",
+          "period_end": "2022-07-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "CPRT",
+          "period_end": "2023-07-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "CPRT",
+          "period_end": "2024-07-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "CPRT",
+          "period_end": "2025-07-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "DHI",
+          "period_end": "2015-09-30",
+          "available_metrics": 7
+        },
+        {
+          "ticker": "DHI",
+          "period_end": "2016-09-30",
+          "available_metrics": 7
+        },
+        {
+          "ticker": "DHI",
+          "period_end": "2017-09-30",
+          "available_metrics": 7
+        },
+        {
+          "ticker": "DHI",
+          "period_end": "2018-09-30",
+          "available_metrics": 7
+        },
+        {
+          "ticker": "DHI",
+          "period_end": "2019-09-30",
+          "available_metrics": 7
+        },
+        {
+          "ticker": "DHI",
+          "period_end": "2020-09-30",
+          "available_metrics": 7
+        },
+        {
+          "ticker": "DHI",
+          "period_end": "2021-09-30",
+          "available_metrics": 7
+        },
+        {
+          "ticker": "DHI",
+          "period_end": "2022-09-30",
+          "available_metrics": 7
+        },
+        {
+          "ticker": "DHI",
+          "period_end": "2023-09-30",
+          "available_metrics": 7
+        },
+        {
+          "ticker": "DHI",
+          "period_end": "2024-09-30",
+          "available_metrics": 7
+        },
+        {
+          "ticker": "DHI",
+          "period_end": "2025-09-30",
+          "available_metrics": 7
+        },
+        {
+          "ticker": "EAT",
+          "period_end": "2015-06-24",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "EAT",
+          "period_end": "2016-06-29",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "EAT",
+          "period_end": "2017-06-28",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "EAT",
+          "period_end": "2018-06-27",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "EAT",
+          "period_end": "2019-06-26",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "EAT",
+          "period_end": "2020-06-24",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "EAT",
+          "period_end": "2021-06-30",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "EAT",
+          "period_end": "2022-06-29",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "EAT",
+          "period_end": "2023-06-28",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "EAT",
+          "period_end": "2024-06-26",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "EAT",
+          "period_end": "2025-06-25",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "EAT",
+          "period_end": "2026-06-24",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "LUV",
+          "period_end": "2015-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "LUV",
+          "period_end": "2016-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "LUV",
+          "period_end": "2017-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "LUV",
+          "period_end": "2018-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "LUV",
+          "period_end": "2019-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "LUV",
+          "period_end": "2020-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "LUV",
+          "period_end": "2021-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "LUV",
+          "period_end": "2022-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "LUV",
+          "period_end": "2023-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "LUV",
+          "period_end": "2024-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "LUV",
+          "period_end": "2025-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "T",
+          "period_end": "2016-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "T",
+          "period_end": "2017-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "T",
+          "period_end": "2018-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "T",
+          "period_end": "2019-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "T",
+          "period_end": "2020-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "T",
+          "period_end": "2021-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "T",
+          "period_end": "2022-12-31",
+          "available_metrics": 8
+        },
+        {
+          "ticker": "T",
+          "period_end": "2023-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "T",
+          "period_end": "2024-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "T",
+          "period_end": "2025-12-31",
+          "available_metrics": 9
+        },
+        {
+          "ticker": "TXN",
+          "period_end": "2015-12-31",
+          "available_metrics": 9
+        }
+      ]
+    },
+    {
+      "check": "balance_equation",
+      "severity": "warning",
+      "rows": [
+        {
+          "ticker": "WING",
+          "period_end": "2016-12-31",
+          "assets": "111800000.0000",
+          "liabilities": "186428000.0000",
+          "equity": "-81430000.0000",
+          "residual": "6802000.0000"
+        },
+        {
+          "ticker": "CBRE",
+          "period_end": "2016-12-31",
+          "assets": "10779587000.0000",
+          "liabilities": "7722342000.0000",
+          "equity": "3145900000.0000",
+          "residual": "-88655000.0000"
+        },
+        {
+          "ticker": "WING",
+          "period_end": "2015-12-26",
+          "assets": "120650000.0000",
+          "liabilities": "130323000.0000",
+          "equity": "-14810000.0000",
+          "residual": "5137000.0000"
+        },
+        {
+          "ticker": "CBRE",
+          "period_end": "2020-12-31",
+          "assets": "18039143000.0000",
+          "liabilities": "10533483000.0000",
+          "equity": "7120000000.0000",
+          "residual": "385660000.0000"
+        },
+        {
+          "ticker": "CBRE",
+          "period_end": "2025-12-31",
+          "assets": "30877000000.0000",
+          "liabilities": "21251000000.0000",
+          "equity": "9193000000.0000",
+          "residual": "433000000.0000"
+        }
+      ],
+      "note": "Concept scope or filing revisions may differ; inspect source evidence"
+    }
+  ],
+  "total_facts": 10738,
+  "annual_periods": 89,
+  "revisions": 112,
+  "published_at": "2026-09-17T16:54:00.372007+00:00",
+  "elapsed_seconds": 7.125,
+  "warehouse": "releases/dd0f9d68a3904f73b05f2b5a5efcb144/warehouse.duckdb"
+}

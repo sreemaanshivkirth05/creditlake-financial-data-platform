@@ -1,0 +1,612 @@
+{
+  "run_id": "f2e388126a1f4c64980baecd2664e1c9",
+  "as_of": "2026-09-18",
+  "summary": {
+    "issuers": 8,
+    "annual_periods": 89,
+    "complete_periods": 35,
+    "incomplete_periods": 54,
+    "balance_warnings": 5
+  },
+  "metric_contract": [
+    "revenue",
+    "net_income",
+    "operating_income",
+    "operating_cash_flow",
+    "assets",
+    "liabilities",
+    "equity",
+    "current_assets",
+    "current_liabilities",
+    "cash"
+  ],
+  "by_issuer": [
+    {
+      "ticker": "CBRE",
+      "annual_periods": 11,
+      "complete_periods": 10,
+      "missing_by_metric": {
+        "revenue": 0,
+        "net_income": 0,
+        "operating_income": 0,
+        "operating_cash_flow": 1,
+        "assets": 0,
+        "liabilities": 0,
+        "equity": 0,
+        "current_assets": 0,
+        "current_liabilities": 0,
+        "cash": 0
+      }
+    },
+    {
+      "ticker": "CPRT",
+      "annual_periods": 11,
+      "complete_periods": 3,
+      "missing_by_metric": {
+        "revenue": 0,
+        "net_income": 0,
+        "operating_income": 0,
+        "operating_cash_flow": 2,
+        "assets": 0,
+        "liabilities": 0,
+        "equity": 0,
+        "current_assets": 0,
+        "current_liabilities": 0,
+        "cash": 6
+      }
+    },
+    {
+      "ticker": "DHI",
+      "annual_periods": 11,
+      "complete_periods": 0,
+      "missing_by_metric": {
+        "revenue": 0,
+        "net_income": 0,
+        "operating_income": 11,
+        "operating_cash_flow": 0,
+        "assets": 0,
+        "liabilities": 0,
+        "equity": 0,
+        "current_assets": 11,
+        "current_liabilities": 11,
+        "cash": 0
+      }
+    },
+    {
+      "ticker": "EAT",
+      "annual_periods": 12,
+      "complete_periods": 0,
+      "missing_by_metric": {
+        "revenue": 0,
+        "net_income": 0,
+        "operating_income": 0,
+        "operating_cash_flow": 0,
+        "assets": 0,
+        "liabilities": 12,
+        "equity": 0,
+        "current_assets": 0,
+        "current_liabilities": 0,
+        "cash": 0
+      }
+    },
+    {
+      "ticker": "LUV",
+      "annual_periods": 11,
+      "complete_periods": 0,
+      "missing_by_metric": {
+        "revenue": 0,
+        "net_income": 0,
+        "operating_income": 0,
+        "operating_cash_flow": 0,
+        "assets": 0,
+        "liabilities": 11,
+        "equity": 0,
+        "current_assets": 0,
+        "current_liabilities": 0,
+        "cash": 0
+      }
+    },
+    {
+      "ticker": "T",
+      "annual_periods": 11,
+      "complete_periods": 1,
+      "missing_by_metric": {
+        "revenue": 0,
+        "net_income": 0,
+        "operating_income": 0,
+        "operating_cash_flow": 1,
+        "assets": 0,
+        "liabilities": 10,
+        "equity": 0,
+        "current_assets": 0,
+        "current_liabilities": 0,
+        "cash": 0
+      }
+    },
+    {
+      "ticker": "TXN",
+      "annual_periods": 11,
+      "complete_periods": 10,
+      "missing_by_metric": {
+        "revenue": 0,
+        "net_income": 0,
+        "operating_income": 0,
+        "operating_cash_flow": 1,
+        "assets": 0,
+        "liabilities": 0,
+        "equity": 0,
+        "current_assets": 0,
+        "current_liabilities": 0,
+        "cash": 0
+      }
+    },
+    {
+      "ticker": "WING",
+      "annual_periods": 11,
+      "complete_periods": 11,
+      "missing_by_metric": {
+        "revenue": 0,
+        "net_income": 0,
+        "operating_income": 0,
+        "operating_cash_flow": 0,
+        "assets": 0,
+        "liabilities": 0,
+        "equity": 0,
+        "current_assets": 0,
+        "current_liabilities": 0,
+        "cash": 0
+      }
+    }
+  ],
+  "incomplete_periods": [
+    {
+      "ticker": "CBRE",
+      "period_end": "2015-12-31",
+      "missing_metrics": [
+        "operating_cash_flow"
+      ]
+    },
+    {
+      "ticker": "CPRT",
+      "period_end": "2015-07-31",
+      "missing_metrics": [
+        "operating_cash_flow"
+      ]
+    },
+    {
+      "ticker": "CPRT",
+      "period_end": "2016-07-31",
+      "missing_metrics": [
+        "operating_cash_flow"
+      ]
+    },
+    {
+      "ticker": "CPRT",
+      "period_end": "2020-07-31",
+      "missing_metrics": [
+        "cash"
+      ]
+    },
+    {
+      "ticker": "CPRT",
+      "period_end": "2021-07-31",
+      "missing_metrics": [
+        "cash"
+      ]
+    },
+    {
+      "ticker": "CPRT",
+      "period_end": "2022-07-31",
+      "missing_metrics": [
+        "cash"
+      ]
+    },
+    {
+      "ticker": "CPRT",
+      "period_end": "2023-07-31",
+      "missing_metrics": [
+        "cash"
+      ]
+    },
+    {
+      "ticker": "CPRT",
+      "period_end": "2024-07-31",
+      "missing_metrics": [
+        "cash"
+      ]
+    },
+    {
+      "ticker": "CPRT",
+      "period_end": "2025-07-31",
+      "missing_metrics": [
+        "cash"
+      ]
+    },
+    {
+      "ticker": "DHI",
+      "period_end": "2015-09-30",
+      "missing_metrics": [
+        "operating_income",
+        "current_assets",
+        "current_liabilities"
+      ]
+    },
+    {
+      "ticker": "DHI",
+      "period_end": "2016-09-30",
+      "missing_metrics": [
+        "operating_income",
+        "current_assets",
+        "current_liabilities"
+      ]
+    },
+    {
+      "ticker": "DHI",
+      "period_end": "2017-09-30",
+      "missing_metrics": [
+        "operating_income",
+        "current_assets",
+        "current_liabilities"
+      ]
+    },
+    {
+      "ticker": "DHI",
+      "period_end": "2018-09-30",
+      "missing_metrics": [
+        "operating_income",
+        "current_assets",
+        "current_liabilities"
+      ]
+    },
+    {
+      "ticker": "DHI",
+      "period_end": "2019-09-30",
+      "missing_metrics": [
+        "operating_income",
+        "current_assets",
+        "current_liabilities"
+      ]
+    },
+    {
+      "ticker": "DHI",
+      "period_end": "2020-09-30",
+      "missing_metrics": [
+        "operating_income",
+        "current_assets",
+        "current_liabilities"
+      ]
+    },
+    {
+      "ticker": "DHI",
+      "period_end": "2021-09-30",
+      "missing_metrics": [
+        "operating_income",
+        "current_assets",
+        "current_liabilities"
+      ]
+    },
+    {
+      "ticker": "DHI",
+      "period_end": "2022-09-30",
+      "missing_metrics": [
+        "operating_income",
+        "current_assets",
+        "current_liabilities"
+      ]
+    },
+    {
+      "ticker": "DHI",
+      "period_end": "2023-09-30",
+      "missing_metrics": [
+        "operating_income",
+        "current_assets",
+        "current_liabilities"
+      ]
+    },
+    {
+      "ticker": "DHI",
+      "period_end": "2024-09-30",
+      "missing_metrics": [
+        "operating_income",
+        "current_assets",
+        "current_liabilities"
+      ]
+    },
+    {
+      "ticker": "DHI",
+      "period_end": "2025-09-30",
+      "missing_metrics": [
+        "operating_income",
+        "current_assets",
+        "current_liabilities"
+      ]
+    },
+    {
+      "ticker": "EAT",
+      "period_end": "2015-06-24",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "EAT",
+      "period_end": "2016-06-29",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "EAT",
+      "period_end": "2017-06-28",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "EAT",
+      "period_end": "2018-06-27",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "EAT",
+      "period_end": "2019-06-26",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "EAT",
+      "period_end": "2020-06-24",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "EAT",
+      "period_end": "2021-06-30",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "EAT",
+      "period_end": "2022-06-29",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "EAT",
+      "period_end": "2023-06-28",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "EAT",
+      "period_end": "2024-06-26",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "EAT",
+      "period_end": "2025-06-25",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "EAT",
+      "period_end": "2026-06-24",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "LUV",
+      "period_end": "2015-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "LUV",
+      "period_end": "2016-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "LUV",
+      "period_end": "2017-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "LUV",
+      "period_end": "2018-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "LUV",
+      "period_end": "2019-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "LUV",
+      "period_end": "2020-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "LUV",
+      "period_end": "2021-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "LUV",
+      "period_end": "2022-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "LUV",
+      "period_end": "2023-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "LUV",
+      "period_end": "2024-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "LUV",
+      "period_end": "2025-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "T",
+      "period_end": "2016-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "T",
+      "period_end": "2017-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "T",
+      "period_end": "2018-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "T",
+      "period_end": "2019-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "T",
+      "period_end": "2020-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "T",
+      "period_end": "2021-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "T",
+      "period_end": "2022-12-31",
+      "missing_metrics": [
+        "operating_cash_flow",
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "T",
+      "period_end": "2023-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "T",
+      "period_end": "2024-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "T",
+      "period_end": "2025-12-31",
+      "missing_metrics": [
+        "liabilities"
+      ]
+    },
+    {
+      "ticker": "TXN",
+      "period_end": "2015-12-31",
+      "missing_metrics": [
+        "operating_cash_flow"
+      ]
+    }
+  ],
+  "balance_warnings": [
+    {
+      "ticker": "CBRE",
+      "period_end": "2016-12-31",
+      "assets": "10779587000.0000",
+      "liabilities": "7722342000.0000",
+      "equity": "3145900000.0000",
+      "residual": "-88655000.0000",
+      "tolerance": "53897935.0000000"
+    },
+    {
+      "ticker": "CBRE",
+      "period_end": "2020-12-31",
+      "assets": "18039143000.0000",
+      "liabilities": "10533483000.0000",
+      "equity": "7120000000.0000",
+      "residual": "385660000.0000",
+      "tolerance": "90195715.0000000"
+    },
+    {
+      "ticker": "CBRE",
+      "period_end": "2025-12-31",
+      "assets": "30877000000.0000",
+      "liabilities": "21251000000.0000",
+      "equity": "9193000000.0000",
+      "residual": "433000000.0000",
+      "tolerance": "154385000.0000000"
+    },
+    {
+      "ticker": "WING",
+      "period_end": "2015-12-26",
+      "assets": "120650000.0000",
+      "liabilities": "130323000.0000",
+      "equity": "-14810000.0000",
+      "residual": "5137000.0000",
+      "tolerance": "603250.0000000"
+    },
+    {
+      "ticker": "WING",
+      "period_end": "2016-12-31",
+      "assets": "111800000.0000",
+      "liabilities": "186428000.0000",
+      "equity": "-81430000.0000",
+      "residual": "6802000.0000",
+      "tolerance": "559000.0000000"
+    }
+  ],
+  "interpretation": "Missing metrics are unavailable under the configured whole-entity USD concept map, not zero values or healthy financial signals. A balance warning can result from concept scope or independently revised filing evidence; inspect the source before classifying it as a reporting error. This report describes the published annual mart."
+}
