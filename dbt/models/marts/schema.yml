@@ -1,0 +1,37 @@
+version: 2
+models:
+  - name: stg_canonical_facts
+    description: Latest eligible filing evidence per issuer, metric, and annual period end at the cutoff.
+    columns:
+      - name: fact_id
+        data_tests: [unique, not_null]
+  - name: dim_issuer
+    description: One current application-time issuer dimension row per CIK.
+    columns:
+      - name: issuer_key
+        data_tests: [unique, not_null]
+      - name: cik
+        data_tests: [unique, not_null]
+  - name: fct_annual_financials
+    description: Annual USD financials at issuer and actual fiscal period end grain; missing metrics remain null.
+    columns:
+      - name: annual_key
+        data_tests: [unique, not_null]
+      - name: revenue
+        data_tests: [not_null]
+      - name: issuer_key
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_issuer')
+                field: issuer_key
+  - name: mart_company_trends
+    description: Explainable annual ratios, YoY growth, and descriptive review flags, not credit ratings.
+    columns:
+      - name: annual_key
+        data_tests: [unique, not_null]
+  - name: mart_filing_revisions
+    description: Monetary changes across annual filings; includes reclassifications and updated comparative values.
+    columns:
+      - name: fact_id
+        data_tests: [unique, not_null]
