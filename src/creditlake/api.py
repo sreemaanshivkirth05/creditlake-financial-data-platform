@@ -29,7 +29,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     settings = settings or Settings.load()
     app = FastAPI(
         title="CreditLake",
-        version="1.1.0",
+        version="1.2.0",
         description=(
             "Read-only financial analytics. Filing-date cutoffs exclude later filings; "
             "optional observation cutoffs exclude facts first seen later by this platform. "
