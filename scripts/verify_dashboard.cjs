@@ -37,7 +37,10 @@ const { chromium } = require(process.env.CREDITLAKE_PLAYWRIGHT || "playwright");
         document.getElementById("content").getAttribute("aria-busy") ===
         "false",
     );
-  const navigate = (view) => page.locator('[data-view="' + view + '"]').click();
+  const navigate = async (view) => {
+    await page.locator('[data-view="' + view + '"]').click();
+    await page.locator("#" + view).waitFor({ state: "visible" });
+  };
   const apply = async (ticker, cutoff) => {
     await page.locator("#company").selectOption(ticker);
     await page.locator("#cutoff").fill(cutoff);
