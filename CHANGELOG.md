@@ -7,7 +7,7 @@
 - Added exact-value source details and filing-cutoff-aware CSV exports.
 - Added published-release coverage, missing-metric, and balance-review views.
 - Split browser assets into maintainable HTML, CSS, and JavaScript; retained the self-contained export.
-- Removed profile and interview material and standardized project verification commands.
+- Standardized technical documentation and project verification commands.
 
 ## 1.1.0 — Recovery verification and data observability
 

@@ -1,7 +1,7 @@
 {
   "project": "CreditLake",
-  "version": "1.1.0",
-  "file_count": 110,
+  "version": "1.2.0",
+  "file_count": 108,
   "files": [
     {
       "path": ".dockerignore",
@@ -15,18 +15,18 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "bytes": 1889,
-      "sha256": "6f8f0288d6a3f97bcd65b7a8855cf1699235f0cdd37bdc47d746eb2930572f90"
+      "bytes": 2952,
+      "sha256": "c995800506a3323325e545ad35595ce22605151a5acd5c15d6bf364557f63bb1"
     },
     {
       "path": ".gitignore",
-      "bytes": 218,
-      "sha256": "5ae4a9134ec5a7ef107d98573649aeda125935c977f10c7abf5bbaeef5259894"
+      "bytes": 230,
+      "sha256": "001000fe755b518337798a1f41cd82efcd3dc8ba0d6ce749ec28084ab972f972"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 1274,
-      "sha256": "083212a64043962f810f6912cd045d514f35b1c6f5f45859b0bf5bf3aff91855"
+      "bytes": 1817,
+      "sha256": "c672e49f3c17733701c067ea7885318a2b2780c8ea38031fc2a6700a36557fc5"
     },
     {
       "path": "Dockerfile",
@@ -45,13 +45,13 @@
     },
     {
       "path": "Makefile",
-      "bytes": 599,
-      "sha256": "3c2e866b63b902e73083c94457dc531435859d6d59488df6e850b69a2cbef329"
+      "bytes": 597,
+      "sha256": "6d9a41824febc3339bad09459632f6cc744851df0e2fbbc5e9e302a45f4e980d"
     },
     {
       "path": "README.md",
-      "bytes": 10698,
-      "sha256": "0b1c3a67dfe2d53042dd4dcc1a860afa662d938c26a2cef6372a9680d162aeb2"
+      "bytes": 10991,
+      "sha256": "1dc7bed794959da9594c77e0aa6c59477a35de15c711b136145be1fe50dbb288"
     },
     {
       "path": "compose.yaml",
@@ -150,33 +150,23 @@
     },
     {
       "path": "demo/CreditLake_Demo.html",
-      "bytes": 1169847,
-      "sha256": "cb64aea74102baaa71b088a49ded53bb8458db995766a9bd2a526f45b6dbd1c9"
+      "bytes": 1403519,
+      "sha256": "8649b464de5c2b206e8c0e46dbe9356b7541c492c16354001a42e228bbdb8bf2"
     },
     {
-      "path": "demo/dashboard-api-mobile.png",
-      "bytes": 174593,
-      "sha256": "7ada6e7bbf880eb637382667c65c32ef235c2b6dade903ef9a85d7b9b1168020"
+      "path": "demo/dashboard-desktop.jpg",
+      "bytes": 161028,
+      "sha256": "087b465001f369c280e661f7149a78235e44f63fd44567e965e85dfcaffb9020"
     },
     {
-      "path": "demo/dashboard-api.png",
-      "bytes": 213036,
-      "sha256": "12c51a842a196363465089033dbb341007107a099d0308f50a28dca13379a9da"
-    },
-    {
-      "path": "demo/dashboard-standalone-mobile.png",
-      "bytes": 172997,
-      "sha256": "7892d54fb8d38d5fa299d1e02993dddb9e39e8c4ce8a664ffd0c80e40fe57bad"
-    },
-    {
-      "path": "demo/dashboard-standalone.png",
-      "bytes": 211188,
-      "sha256": "5263a6f099efd5457c4859beebf9d276ec91b33a31146443e948a892c6efe430"
+      "path": "demo/dashboard-mobile.jpg",
+      "bytes": 106597,
+      "sha256": "f5dd8e8958781af458e566469920669125f89fb126a0e0db66c6b9720df38028"
     },
     {
       "path": "docs/ARCHITECTURE.md",
-      "bytes": 7040,
-      "sha256": "5335135598fc8fbafdc89cdb216db5a6066ac20da8c14221388cc222ca793178"
+      "bytes": 7050,
+      "sha256": "7306e38899a95d5b3424505308d919161c83bb55cd21b1abefc07f8c8ed7666c"
     },
     {
       "path": "docs/DATA_CONTRACT.md",
@@ -189,24 +179,14 @@
       "sha256": "90c0afe00467211936ae6123057a484de1dfca238c6a9dd56f3ce84cbe35b834"
     },
     {
-      "path": "docs/INTERVIEW_GUIDE.md",
-      "bytes": 5320,
-      "sha256": "f88482af9a83be85fda65b7f91e38be1fe43cbbdc7eacc527b184e736319b7ed"
-    },
-    {
-      "path": "docs/PROFILE.md",
-      "bytes": 2019,
-      "sha256": "f9f2ed1889bbb9d90c2aaea55b605f457ec8db006577e85982ba682b34d10c38"
-    },
-    {
       "path": "docs/ROADMAP.md",
       "bytes": 2984,
       "sha256": "c48848089d9fbde7553e5d74b799826e946254294161536a3781150ba9071287"
     },
     {
       "path": "docs/RUNBOOK.md",
-      "bytes": 7181,
-      "sha256": "d3db436b47b719d309f1f69c6b29e0fd78e5a7d4cb4e0bb97135301bf7a6396c"
+      "bytes": 7341,
+      "sha256": "ef316729d39a27c26fe0325abb4b23c04d122ce2916e44303b60d55e8a1f6cac"
     },
     {
       "path": "docs/SOURCES.md",
@@ -215,8 +195,8 @@
     },
     {
       "path": "docs/VALIDATION.md",
-      "bytes": 6142,
-      "sha256": "06531c1f27f9a4de5b89addfa3a637e5f5904d9007a2bc953f36b0210cac7a95"
+      "bytes": 6596,
+      "sha256": "11218204d9f2d235dbc57fd5c329dec88aab922d003f22476b1e7a5ca86af924"
     },
     {
       "path": "docs/evidence/airflow-dag-test.log",
@@ -235,8 +215,8 @@
     },
     {
       "path": "docs/evidence/api-smoke-local.json",
-      "bytes": 373,
-      "sha256": "d8dc552a8c48fd2c7f47cfa3fb3ae641b754d7d3f8ed69941d90aff703901df4"
+      "bytes": 316,
+      "sha256": "265aa1876e9d3e4371c11676f1424cdc97fd55abbd598ab60adf4ec1b75be641"
     },
     {
       "path": "docs/evidence/api-smoke-server.log",
@@ -260,8 +240,8 @@
     },
     {
       "path": "docs/evidence/dashboard-validation.json",
-      "bytes": 511,
-      "sha256": "69acdbe108f41cd5ff98f809173f0e461a557a551c305b961cce22368a9a8c0c"
+      "bytes": 1494,
+      "sha256": "a6c9beb78e06ad4b1df1fdf5fc23401e76892244b27700617c9b063a37dfed9d"
     },
     {
       "path": "docs/evidence/full-pipeline-report.json",
@@ -269,14 +249,14 @@
       "sha256": "8a5838802d830fb13a569ecdc69599d5b86caf481ee63c9606636f928396be50"
     },
     {
-      "path": "docs/evidence/portfolio-validation.json",
-      "bytes": 865,
-      "sha256": "b3215d7f9a94411fd3940b3a968f9b10ccdf5da065178c3abbb4152a4fdd1c91"
-    },
-    {
       "path": "docs/evidence/pytest.xml",
       "bytes": 4513,
-      "sha256": "628e29178619a5ac739b0b1ce5482c966ef82ebf41cf4c8572d300f9f710a226"
+      "sha256": "8f30a585677fdf54a0c962e975f7a14a5d836890d501219390475bbb258ae855"
+    },
+    {
+      "path": "docs/evidence/recovery-validation.json",
+      "bytes": 865,
+      "sha256": "b3215d7f9a94411fd3940b3a968f9b10ccdf5da065178c3abbb4152a4fdd1c91"
     },
     {
       "path": "docs/evidence/replay-report.json",
@@ -336,7 +316,7 @@
     {
       "path": "pyproject.toml",
       "bytes": 879,
-      "sha256": "95b27bfc714a13795e784c17840b1a56378f46000dae160602064c19ccab5df4"
+      "sha256": "c4ae45f96da18a1e29042391eaaa0f892c2ad16853bdc5fe9aec71ed4a4a075e"
     },
     {
       "path": "requirements.lock.txt",
@@ -425,23 +405,23 @@
     },
     {
       "path": "scripts/export_demo.py",
-      "bytes": 2463,
-      "sha256": "c81122ca80e2ef649fb75f23c1a6e17b482097131ebc9e81fa96b6c115d0cbf8"
+      "bytes": 3143,
+      "sha256": "5c8684b3ce274bcbba07fb917c6a727c01c4caf6e154a29f209b25b6663494d1"
     },
     {
       "path": "scripts/package_project.py",
       "bytes": 2125,
-      "sha256": "0711fc71c6ad50678ce7e1d2baed206b47a8c81bf09e61955691d195e55139cd"
+      "sha256": "e8affbad223792da7a035917c515b9e5331213c469d48b1cf4261a0d8338d5d2"
     },
     {
       "path": "scripts/verify_dashboard.cjs",
-      "bytes": 4279,
-      "sha256": "8c98caa15182b69d846e1ef60f66e5d1ea6540141f71cda86a78d2e8e85b64b0"
+      "bytes": 9985,
+      "sha256": "ba7d75589024075d880cfa833a6541f64f6717f60da66ab81c835b1f17047677"
     },
     {
-      "path": "scripts/verify_portfolio.py",
-      "bytes": 4022,
-      "sha256": "a8e88a21d51d861da3973577dd86b876da3a3ac1713ae68ade58b2fe55ba1361"
+      "path": "scripts/verify_pipeline.py",
+      "bytes": 4031,
+      "sha256": "2d45b938af734578a7d798f60a8849b5cf3c2a14de88d308a18770e98906f30f"
     },
     {
       "path": "scripts/verify_release.py",
@@ -456,7 +436,7 @@
     {
       "path": "src/creditlake/__init__.py",
       "bytes": 65,
-      "sha256": "bfc5aa19fdc646fa4f83cd5302251a201d9296e08741c561a9f476ac012c738c"
+      "sha256": "3d84baca73e9d6655ebb4d37019432b3256d28b5373ebbdbf6ae06ca6affe1f7"
     },
     {
       "path": "src/creditlake/analytics.py",
@@ -466,7 +446,7 @@
     {
       "path": "src/creditlake/api.py",
       "bytes": 9901,
-      "sha256": "be01b31e52fa54e7ba45452ffef0730a471292de11058488a7a192965074203e"
+      "sha256": "b8ec2fc3061b36689aa9cd4f687aab4f70b18d57b4ed29c38bc2a56a0d987b1c"
     },
     {
       "path": "src/creditlake/cli.py",
@@ -499,9 +479,19 @@
       "sha256": "ab39633381c82d18663d0f4fa61b60a80327237b3c66a955b4bffc23b5ba5b1c"
     },
     {
+      "path": "src/creditlake/static/app.css",
+      "bytes": 21801,
+      "sha256": "f679d0a74e53eb7b0a78404792347a9cddc2f23eaad61c67ff3c15aa5f7dcd8e"
+    },
+    {
+      "path": "src/creditlake/static/app.js",
+      "bytes": 32232,
+      "sha256": "823c89d4b8ed8320b660a4ebd70c5e488811cada5ab3faa5488073eca56c84ec"
+    },
+    {
       "path": "src/creditlake/static/index.html",
-      "bytes": 19539,
-      "sha256": "7d09d416e7bd80f995360c52f80461721fd55f566cff4f8fe977bb8f3788bf45"
+      "bytes": 17979,
+      "sha256": "e921a1bddf8d63afeadb24954bfb14dd859f99f13dff64254bf97fff0e526ccf"
     },
     {
       "path": "src/creditlake/warehouse.py",
