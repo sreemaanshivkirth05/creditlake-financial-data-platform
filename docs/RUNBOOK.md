@@ -19,13 +19,15 @@ The latter is a captured preview; it does not refresh itself from SEC.
 Optional browser verification requires Node and Playwright:
 
 ```bash
-npm install --no-save playwright
-npx playwright install chromium
+npm install --no-save playwright@1.58.2
+npx playwright install --with-deps chromium
 python scripts/verify_ui.py
 ```
 
 This starts a temporary API process and verifies the standalone and API dashboard,
 including historical/empty cutoffs, company switching, charts, and mobile overflow.
+The same check runs in CI. Reports and screenshots are written to
+`validation/dashboard/` and uploaded as the `validation-dashboard` artifact.
 
 Install through the project rather than installing only the Python wheel: the
 repository includes the dbt project, configuration, and real source fixtures.
@@ -42,7 +44,7 @@ If running from elsewhere, set `CREDITLAKE_ROOT` to the unpacked project directo
 | Acquire an earlier year range | `creditlake --min-year 2010 run` |
 | Inspect the serving release | `creditlake status` |
 | Explain financial coverage | `creditlake quality` |
-| Reproduce the isolated portfolio demonstration | `python scripts/verify_portfolio.py` |
+| Verify lineage, replay, and release recovery | `python scripts/verify_pipeline.py` |
 | Serve dashboard and API | `creditlake serve --port 8000` |
 | Create standalone demo | `python scripts/export_demo.py` |
 | Measure synthetic load | `python scripts/benchmark.py --rows 100000` |
@@ -78,7 +80,7 @@ Completeness and balance warnings are in the release report. Investigate them
 using metric concept, accession, and the original source archive. They are not
 filled with synthetic financial values.
 
-## Demonstrate recovery
+## Failure recovery check
 
 ```bash
 creditlake status
@@ -129,7 +131,7 @@ be opened. Release age means time since publication, not time since the SEC was
 successfully checked. A failed refresh can leave a valid older release serving;
 inspect `data/runs/<id>/report.json` when diagnosing the latest attempt.
 
-Suggested alert experiments include readiness zero, unexpected coverage changes,
+Suggested alert conditions include readiness zero, unexpected coverage changes,
 and failed scheduled runs. The project provides metrics and structured reports;
 an external monitoring backend and notifications are not configured.
 
