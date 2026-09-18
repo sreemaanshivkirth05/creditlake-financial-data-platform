@@ -1,4 +1,4 @@
-"""Reproduce the interview demonstration in isolated storage without credentials."""
+"""Verify source lineage, replay, release recovery, and temporal query behavior."""
 
 from __future__ import annotations
 
@@ -22,7 +22,7 @@ def main():
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     cutoff = date(2026, 9, 17)
-    with tempfile.TemporaryDirectory(prefix="creditlake-portfolio-") as directory:
+    with tempfile.TemporaryDirectory(prefix="creditlake-verification-") as directory:
         settings = Settings.load(root, Path(directory))
         initial = run_pipeline(settings, as_of=cutoff)
         client = TestClient(create_app(settings))
@@ -40,7 +40,7 @@ def main():
         except RuntimeError as exc:
             assert str(exc) == "Injected failure before publication"
         else:
-            raise AssertionError("Expected the demonstration failure")
+            raise AssertionError("Expected the injected publication failure")
         assert client.get("/health").json()["run_id"] == initial["run_id"]
         assert release_manifest(settings.data_dir)["run_id"] == initial["run_id"]
         recovered = run_pipeline(settings, as_of=cutoff, force=True)

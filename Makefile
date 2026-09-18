@@ -19,7 +19,7 @@ lint:
 	$(PYTHON) -m ruff format --check .
 
 verify:
-	$(PYTHON) scripts/verify_portfolio.py --output docs/evidence/portfolio-validation.json
+	$(PYTHON) scripts/verify_pipeline.py --output docs/evidence/recovery-validation.json
 
 quality:
 	$(PYTHON) -m creditlake.cli quality

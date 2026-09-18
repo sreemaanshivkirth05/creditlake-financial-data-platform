@@ -1,24 +1,57 @@
 {
+  "status": "pass",
+  "viewports": [
+    {
+      "width": 1365,
+      "height": 1150
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
   "checks": [
     {
       "target": "standalone",
       "issuer_count": 8,
+      "period_summary_and_source": true,
+      "source_details_and_escape": true,
       "historical_cutoff": true,
+      "filtered_csv_export": true,
       "empty_history": true,
       "issuer_switch": true,
       "chart_switch": true,
-      "mobile_no_overflow": true
+      "quality_totals_and_drilldown": true,
+      "api_error_and_retry": null,
+      "desktop_no_overflow": true,
+      "mobile_all_views_no_overflow": true
     },
     {
       "target": "api",
       "issuer_count": 8,
+      "period_summary_and_source": true,
+      "source_details_and_escape": true,
       "historical_cutoff": true,
+      "filtered_csv_export": true,
       "empty_history": true,
       "issuer_switch": true,
       "chart_switch": true,
-      "mobile_no_overflow": true
+      "quality_totals_and_drilldown": true,
+      "api_error_and_retry": true,
+      "desktop_no_overflow": true,
+      "mobile_all_views_no_overflow": true
     }
   ],
   "javascript_errors": [],
-  "browser": "134.0.6998.35"
+  "browser": "145.0.7632.6",
+  "execution": {
+    "environment": "GitHub Actions",
+    "run_id": 35367088922,
+    "head_commit": "da1f050fa113041536a02aa019894c0a1ebe9916",
+    "run_url": "https://github.com/sreemaanshivkirth05/creditlake-financial-data-platform/actions/runs/35367088922"
+  },
+  "visual_review": {
+    "desktop_screenshot": true,
+    "mobile_screenshot": true
+  }
 }

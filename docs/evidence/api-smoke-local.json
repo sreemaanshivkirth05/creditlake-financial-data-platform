@@ -1,15 +1,16 @@
 {
-  "execution_environment": "local Uvicorn process; container image not tested",
-  "result": {
-    "status": "pass",
-    "run_id": "f2e388126a1f4c64980baecd2664e1c9",
-    "quality_summary": {
-      "issuers": 8,
-      "annual_periods": 89,
-      "complete_periods": 35,
-      "incomplete_periods": 54,
-      "balance_warnings": 5
-    },
-    "lineage_verified": true
-  }
+  "status": "pass",
+  "run_id": "f2e388126a1f4c64980baecd2664e1c9",
+  "quality_summary": {
+    "issuers": 8,
+    "annual_periods": 89,
+    "complete_periods": 35,
+    "incomplete_periods": 54,
+    "balance_warnings": 5
+  },
+  "lineage_verified": true,
+  "static_assets_served": [
+    "app.css",
+    "app.js"
+  ]
 }

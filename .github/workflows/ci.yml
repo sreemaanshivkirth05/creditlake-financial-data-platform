@@ -35,13 +35,41 @@ jobs:
           ruff format --check .
       - name: Run behavioral and integration tests
         run: pytest --junitxml=validation/pytest.xml
-      - name: Reproduce replay, trace, and recovery demonstration
-        run: python scripts/verify_portfolio.py --output validation/portfolio-validation.json
+      - name: Verify replay, trace, and release recovery
+        run: python scripts/verify_pipeline.py --output validation/recovery-validation.json
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         if: always()
         with:
           name: validation-python-${{ matrix.python }}
           path: validation/
+          retention-days: 14
+
+  dashboard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install validated dependencies
+        run: python -m pip install -c requirements.lock.txt -e '.[dev]'
+      - name: Install browser test dependencies
+        run: |
+          npm install --no-save playwright@1.58.2
+          npx playwright install --with-deps chromium
+      - name: Build the captured release and self-contained preview
+        run: |
+          creditlake run --as-of 2026-09-17
+          python scripts/export_demo.py
+      - name: Verify standalone and API-backed workspace
+        run: python scripts/verify_ui.py
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        if: always()
+        with:
+          name: validation-dashboard
+          path: validation/dashboard/
           retention-days: 14
 
   container:

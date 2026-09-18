@@ -1,6 +1,15 @@
 # Changelog
 
-## 1.1.0 — Portfolio verification and data observability
+## 1.2.0 — Financial workspace refresh
+
+- Replaced the dashboard with a light, responsive workspace and focused navigation.
+- Connected fiscal-period selection to financial summaries, coverage, chart points, and evidence.
+- Added exact-value source details and filing-cutoff-aware CSV exports.
+- Added published-release coverage, missing-metric, and balance-review views.
+- Split browser assets into maintainable HTML, CSS, and JavaScript; retained the self-contained export.
+- Standardized technical documentation and project verification commands.
+
+## 1.1.0 — Recovery verification and data observability
 
 - Added immutable fact lineage from SEC response to Parquet and warehouse storage.
 - Added financial coverage reports with named missing fields and balance warnings.
@@ -8,7 +17,7 @@
 - Added a reproducible source-trace, replay, publication-failure, and recovery demonstration.
 - Added five behavioral tests; all 39 Python tests passed locally.
 - Measured a separate 500,000-row synthetic normalization and loading workload.
-- Expanded architecture, coverage investigation, scaling, operations, and profile documentation.
+- Expanded architecture, coverage investigation, scaling, and operations documentation.
 - Configured Python-version CI jobs and a Docker Compose serving check.
 - Pinned official Node 24 GitHub Actions to exact commits after remote CI surfaced runtime deprecations.
 

@@ -55,9 +55,9 @@ cutoff does not imply that the company name shown is historical metadata.
 
 ## Decision: DuckDB and Parquet
 
-The project runs on a laptop with no paid infrastructure, while still
-demonstrating columnar storage, SQL transformations, exact monetary types,
-transactions, and analytical data modeling. DuckDB directly reads/writes
+The annual dataset fits a single-machine analytical workload. Local Parquet
+and DuckDB provide columnar storage, exact monetary types, and transactional
+loading without a separate warehouse service. DuckDB directly reads/writes
 [Parquet](https://duckdb.org/docs/current/data/parquet/overview) and supports
 [transactions](https://duckdb.org/docs/current/sql/statements/transactions).
 The official [dbt DuckDB adapter](https://github.com/duckdb/dbt-duckdb) supplies

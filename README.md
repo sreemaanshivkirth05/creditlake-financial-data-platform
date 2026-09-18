@@ -10,11 +10,11 @@ The bundled dataset covers eight Dallas/Fort Worth issuers. The engineering
 focus is reproducibility, revised filing values, historical cutoffs, provenance,
 and safe publication when a pipeline fails.
 
-![CreditLake financial dashboard](demo/dashboard-standalone.png)
+![CreditLake financial workspace](demo/dashboard-desktop.jpg)
 
 Validated locally: **10,738 financial fact versions · 89 annual periods ·
 23 passing dbt checks · 39 passing Python tests · two successful Airflow tasks**. Python test results and
-the reproducible recovery demonstration are in [validation evidence](docs/VALIDATION.md).
+the reproducible recovery verification are in [validation evidence](docs/VALIDATION.md).
 
 ## The problem this solves
 
@@ -29,18 +29,17 @@ The research workspace supports annual comparisons, margins, liquidity ratios,
 historical filing-date views, and inspection of changed reported values. It covers
 Texas Instruments, AT&T, Southwest, CBRE, Copart, D.R. Horton, Wingstop, and Brinker.
 
-## Review in five minutes
+## Workspace
 
-1. Inspect the [dashboard screenshot](demo/dashboard-standalone.png), or download
-   [the self-contained demo](demo/CreditLake_Demo.html) and open it in a browser.
-2. Read the [architecture and design tradeoffs](docs/ARCHITECTURE.md).
-3. Run `python scripts/verify_portfolio.py` after installing the development dependencies.
-   It demonstrates source tracing, unchanged-source replay, failed publication,
-   recovery, and historical cutoffs in temporary storage.
-4. Inspect [the measured verification report](docs/evidence/portfolio-validation.json)
-   and [financial coverage findings](docs/DATA_QUALITY.md).
-5. Open [the interview guide](docs/INTERVIEW_GUIDE.md) for the fact grain,
-   temporal semantics, SCD2 decisions, and failure scenarios.
+The dashboard provides four views: annual financials, source evidence, changed
+filing values, and published-release data quality. Company and filing-cutoff
+filters control financial history. Fiscal-period selection updates the summary,
+chart, coverage, and source records together. CSV exports include the selected
+filing cutoff and preserve the source monetary values as decimal strings.
+
+Download [the self-contained preview](demo/CreditLake_Demo.html) and open it in a
+browser, or run the API for original-source archive and full provenance downloads.
+The preview uses captured data; it does not fetch current SEC responses.
 
 ## Architecture
 
@@ -66,7 +65,7 @@ flowchart TD
 | dbt | Six dependency-managed models, financial selection rules, and 23 quality checks |
 | Airflow | Scheduled execution, retries, timeouts, and independent release verification |
 | FastAPI | Read-only analytics, original source downloads, metric lineage, and coverage reports |
-| GitHub Actions | Configured behavioral tests, Python version matrix, and Docker serving checks |
+| GitHub Actions | Behavioral tests, Python version matrix, and Docker serving checks |
 
 ## Run locally
 
@@ -94,14 +93,14 @@ For the exact validated dependency versions, install with
 On systems with Make, `make install run serve` performs the same setup after
 activating your environment. PowerShell users can run the Python commands directly.
 
-## What this demonstrates
+## Capabilities
 
 - Incremental snapshot ingestion with SHA-256 checkpoints and deterministic fact IDs.
 - Immutable compressed bronze sources and typed, compressed silver Parquet.
 - Filing revisions retained independently of the latest-value analytical view.
 - SCD Type 2 issuer attributes and a financial star schema at actual period-end grain.
 - dbt transformations, relationship tests, uniqueness tests, and financial contract checks.
-- Quarantine, schema drift telemetry, structured run reports, and recovery demonstrations.
+- Quarantine, schema drift telemetry, structured run reports, and recovery verification.
 - Atomic release publication: readers keep using the previous validated warehouse until the next one passes.
 - A parameterized read-only API with filing-date and platform observation-time cutoffs.
 - A metric lineage endpoint linking each immutable fact to its source, Parquet partition, and warehouse record.
@@ -158,19 +157,15 @@ creditlake status             # the previous release is still serving
 creditlake run --force        # rebuild and publish successfully
 ```
 
-See `docs/ARCHITECTURE.md`, `docs/DATA_CONTRACT.md`, `docs/RUNBOOK.md`,
-`docs/INTERVIEW_GUIDE.md`, and `docs/VALIDATION.md` for design decisions,
-metric semantics, setup variants, and measured evidence.
-
-For one automated demonstration without changing your serving database:
+For isolated verification without changing the serving database:
 
 ```bash
-python scripts/verify_portfolio.py
+python scripts/verify_pipeline.py
 ```
 
 This command uses the captured real dataset, injects a publication failure,
 verifies that the original release still serves, recovers, and checks that the
-old release remains readable. The demonstration completes without API credentials.
+old release remains readable. Verification completes without API credentials.
 
 ## Container setup
 
@@ -182,8 +177,8 @@ docker compose down
 
 The API binds to localhost. The optional Airflow development service is enabled
 with `docker compose --profile airflow up --build airflow`; its DAG starts paused.
-Container builds are configured in CI and were not executed in the local
-validation environment. Check the Actions run before claiming a verified build.
+The Docker build and Compose serving smoke check run in GitHub Actions alongside
+the Python 3.11, 3.12, and 3.13 test matrix. See [validation](docs/VALIDATION.md).
 
 ## Performance and scaling
 
@@ -215,13 +210,13 @@ fixtures/sec/    actual SEC responses and integrity/source manifest
 tests/           replay, revisions, SCD, recovery, API and integration tests
 dags/            Airflow scheduled pipeline
 scripts/         source capture, standalone demo export, benchmark
-docs/            design, operations, hiring demo, validation
+docs/            architecture, contracts, operations, quality, validation
 demo/            shareable dashboard preview
 ```
 
 ## Scope
 
-This is a complete local portfolio implementation, with measured local
+CreditLake runs on a single machine, with measured local and CI
 validation. It does not claim a cloud deployment, distributed scale, or production
 use by a financial institution. Annual ratios use whole-entity USD facts from
 10-K/10-K/A filings. Missing metrics stay null; review flags are descriptive
@@ -230,3 +225,14 @@ Revised reported values may be reclassifications rather than formal restatements
 
 The software is MIT licensed. Public SEC source data retains its original
 provenance; issuer names and marks belong to their respective owners.
+
+## Documentation
+
+| Document | Content |
+|---|---|
+| [Architecture](docs/ARCHITECTURE.md) | Storage, temporal semantics, publication, and design tradeoffs |
+| [Data contract](docs/DATA_CONTRACT.md) | Fact grain, concept mapping, and annual selection rules |
+| [Operations](docs/RUNBOOK.md) | Installation, execution, recovery, monitoring, and containers |
+| [Data quality](docs/DATA_QUALITY.md) | Coverage findings and balance-warning investigation |
+| [Validation](docs/VALIDATION.md) | Measured results, reproducible checks, and execution boundaries |
+| [Roadmap](docs/ROADMAP.md) | Incremental modeling, infrastructure, and operational extensions |
