@@ -29,7 +29,7 @@ def main():
         )
     manifest = {
         "project": "CreditLake",
-        "version": "1.1.0",
+        "version": "1.2.0",
         "file_count": len(entries),
         "files": entries,
     }
