@@ -232,7 +232,11 @@
 
   function renderView() {
     const key = location.hash.slice(1);
-    state.view = Object.hasOwn(views, key) ? key : "overview";
+    state.view = Object.hasOwn(views, key)
+      ? key
+      : key === "main"
+        ? state.view
+        : "overview";
     Object.keys(views).forEach((id) => {
       $(id).hidden = id !== state.view;
     });
